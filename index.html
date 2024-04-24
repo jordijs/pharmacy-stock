@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pharmacy Stock</title>
-    <link href="./src/output.css" rel="stylesheet">
-</head>
-<body>
-    <div class="bg-slate-600 h-screen w-screen"></div>
-    
-</body>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container bg-[#EDF1F5] h-screen w-screen p-5">
+      <div class="w-full flex flex-row justify-between mb-4">
+        <h1 class="text-2xl font-bold text-left">Pharmacy Stock</h1>
+        <button class="bg-red-400 text-white rounded-sm p-2 flex">
+          <span class="font-bold text-xl mr-2 leading-3">+</span
+          ><span class="font-thin text-xs">Add new item</span>
+        </button>
+      </div>
+      <div class="w-full bg-white border border-slate-300 rounded-sm">
+        <div class="flex text-lg justify-between font-semibold border-b">
+          <h2 class="p-2">Medicine Name</h2>
+          <h2 class="p-2">ID (Código Nacional)</h2>
+          <h2 class="p-2">Quantity in stock</h2>
+          <h2 class="p-2">Action</h2>
+        </div>
+        <div class="flex justify-between">
+          <p class="p-2 w-full">
+            No stock available. Please, add medicines using the "Add new item"
+            button
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
