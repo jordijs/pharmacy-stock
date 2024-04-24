@@ -5,6 +5,24 @@ const toggleProductForm = () => {
 }
 
 const submitProductButton = document.getElementById("submitProductButton");
+
+function addClickListenerProducts () {
+    const rows = document.querySelectorAll("tr");
+    rows.forEach(row => {
+      console.log(row)
+      row.addEventListener("click", () => {
+        const cn = row.getAttribute("cn");
+        console.log("Data for row with cn=" + cn);
+      });
+    });
+}
+
+// const medicinesTable = document.getElementById("medicinesTable");
+// medicinesTable.addEventListener("click", (event) => {
+// medicinesTable.  
+
+
+// )
 // const portfolioContainer = document.querySelector("#portfolioContainer");
 // const projectsString = localStorage.getItem("projects");
 // const projectsArray = JSON.parse(projectsString);

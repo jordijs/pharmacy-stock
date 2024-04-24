@@ -1,22 +1,6 @@
-const products = getProducts();
-// renderProducts()
+getMedicines();
 
-// async function renderProducts() {
-//     groupedProducts.then(groupedProducts => {
-//         const productsHtml = groupedProducts.map(product => {
-//             return `<tr class="flex justify-between">
-//       <td></td>
-//       <td>${product.cn}</td>
-//       <td>${product.batch}</td>
-//       <td>Edit</td>
-//     </tr>`
-//         }).join('')
-//         console.log(productsHtml)
-//         document.getElementById("productsTable").innerHTML = productsHtml
-//     })
-// }
-
-async function getProducts() {
+async function getMedicines() {
   const response = await fetch("http://localhost:3000/products");
   const data = await response.json();
   const countCn = await data.reduce((accumulator, product) => {
@@ -28,7 +12,7 @@ async function getProducts() {
     return accumulator;
   }, {});
 
-  const productsStock = [];
+  const medicinesList = [];
 
   for (cn in countCn) {
     const apiResponse = await fetch(
@@ -41,33 +25,21 @@ async function getProducts() {
       name: name,
       stock: countCn[cn],
     };
-    productsStock.push(productStock);
-
-    const productsHtml = productsStock.map((medicine) => {
-        return `<tr>
-        <td class="p-2 flex-1">${medicine.name}</td>
-        <td class="p-2 w-24 text-center">${medicine.cn}</td>
-        <td class="p-2 w-24 text-center">${medicine.stock}</td>
-        <td class="p-2 w-24 text-center">Edit</td>
-    </tr>`;
-      })
-      .join("");
-    console.log(productsHtml);
-    document.getElementById("productsTable").innerHTML = productsHtml;
+    medicinesList.push(productStock);
   }
 
-  console.log(productsStock);
-  // const stock = await countCn.map(medicine => {
-  //     return {
-  //         cn: medicine.cn,
-  //         quantity: medicine.quantity
-  //     }
-  // })
+  const medicinesHtml = medicinesList
+    .map((medicine) => {
+      return `<tr cn=${medicine.cn}>
+    <td class="p-2 flex-1">${medicine.name}</td>
+    <td class="p-2 w-24 text-center">${medicine.cn}</td>
+    <td class="p-2 w-24 text-center">${medicine.stock}</td>
+    </tr>`;
+    })
+    .join("");
 
-  // products.then(products => {
-  //    const groupedProducts = Object.groupBy(products, ({ cn }) => cn)
-  //    console.log(groupedProducts)
-  // })
+  document.getElementById("medicinesTable").innerHTML = medicinesHtml;
+  addClickListenerProducts();
 }
 
 async function createProduct() {
@@ -88,4 +60,35 @@ async function createProduct() {
     body: JSON.stringify(product),
   });
   return response.json();
+}
+
+function addClickListenerProducts () {
+    const rows = document.querySelectorAll("#medicinesTable tr");
+    rows.forEach(row => {
+      row.addEventListener("click", () => {
+        const cn = row.getAttribute("cn");
+        displayDetailMedicine(cn);
+      });
+    });
+}
+
+async function displayDetailMedicine(cn) {
+    const response = await fetch("http://localhost:3000/products");
+    const data = await response.json();
+    const filteredData = data.filter(product => product.cn === cn)
+    const detailHtml = filteredData.map(product => {
+        return `<tr>
+        <td class="p-2">${product.id}</td>
+        <td class="p-2">${product.expiration}</td>
+        <td class="p-2">${product.batch}</td>
+        <td class="p-2">${product.location}</td>
+        </tr>`;
+    }).join("");
+    document.querySelector("#productsDetail tbody").innerHTML = detailHtml;
+    const rows = document.querySelectorAll("#medicinesTable tr");
+    rows.forEach(row => row.classList.remove("bg-blue-200"));
+    document.querySelector("#medicinesTable tr" + `[cn="${cn}"]`).classList.add("bg-blue-200");
+    document.querySelector("#medicinesTable tr" + `[cn="${cn}"]`).classList.add("bg-blue-200");
+    document.getElementById("productsDetail").classList.remove("hidden");
+
 }

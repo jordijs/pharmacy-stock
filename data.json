@@ -1,24 +1,24 @@
 {
   "products": [
     {
-      "id": "44f0",
+      "id": "8382",
       "cn": "954917",
-      "expiration": "2024-04-28",
-      "batch": "gfgfd333",
-      "location": "C1"
+      "expiration": "2024-07-10",
+      "batch": "274A41",
+      "location": "F3"
     },
     {
-      "id": "a58e",
-      "cn": "626572",
-      "expiration": "2024-04-26",
-      "batch": "412GGG",
-      "location": "D1"
+      "id": "a6d7",
+      "cn": "954917",
+      "expiration": "2024-04-27",
+      "batch": "reresf",
+      "location": "A1"
     },
     {
-      "id": "5592",
-      "cn": "626572",
-      "expiration": "2024-04-13",
-      "batch": "ddwasd",
+      "id": "b33c",
+      "cn": "703744",
+      "expiration": "2024-07-12",
+      "batch": "fgess",
       "location": "A1"
     }
   ]
