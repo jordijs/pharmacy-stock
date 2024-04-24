@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": "fbe3",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "fd31",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "e703",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "aa08",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "1c34",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "4465",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "e270",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "5bea",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "e80a",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "2adf",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "8dcd",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    },
+    {
+      "id": "3268",
+      "cn": "954917",
+      "expiration": "2024-12-30",
+      "batch": "FGD563",
+      "location": "A1"
+    }
+  ]
+}
