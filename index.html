@@ -24,23 +24,25 @@
           method="post"
           class="flex flex-col gap-6"
         >
-        <h2 class="text-white text-xl font-bold">New product</h2>
+          <h2 class="text-white text-xl font-bold">New product</h2>
           <div class="flex flex-col gap-2">
-            <label for="CN" class="text-white"> ID (Código Nacional) </label>
+            <label for="cn" class="text-white">ID (Código Nacional)</label>
             <input
               type="number"
-              name="CN"
-              id="CN"
+              name="cn"
+              id="cn"
               class="border border-slate-300 rounded-sm p-2"
+              required
             />
           </div>
           <div class="flex flex-col gap-2">
-            <label for="location"  class="text-white"> Location </label>
+            <label for="location" class="text-white">Location</label>
             <div class="flex gap-2">
               <select
-                name="letter"
-                id="letter"
+                name="location"
+                id="locationLetter"
                 class="border border-slate-300 rounded-sm p-2"
+                required
               >
                 <option value="A">A</option>
                 <option value="B">B</option>
@@ -54,9 +56,10 @@
                 <option value="J">J</option>
               </select>
               <select
-                name="number"
-                id="number"
+                name="location"
+                id="locationNumber"
                 class="border border-slate-300 rounded-sm p-2"
+                required
               >
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -79,6 +82,7 @@
               name="batch"
               id="batch"
               class="border border-slate-300 rounded-sm p-2"
+              required
             />
           </div>
 
@@ -89,19 +93,21 @@
               name="expiration"
               id="expiration"
               class="border border-slate-300 rounded-sm p-2"
+              required
             />
           </div>
 
           <div class="flex justify-between">
             <button
               type="button"
-              onclick="hideProductForm()"
+              onclick="toggleProductForm()"
               class="bg-slate-400 text-white rounded-sm p-2 mt-4"
             >
               Cancel
             </button>
             <button
-              type="submit" id="submitProductButton"
+              type="submit"
+              id="submitProductButton"
               class="bg-teal-700 text-white rounded-sm p-2 mt-4"
             >
               Add
@@ -109,20 +115,24 @@
           </div>
         </form>
       </div>
-      <div class="w-full bg-white border border-slate-300 rounded-sm">
-        <div class="flex text-lg justify-between font-semibold border-b">
-          <h2 class="p-2">Medicine Name</h2>
-          <h2 class="p-2">ID (Código Nacional)</h2>
-          <h2 class="p-2">Quantity in stock</h2>
-          <h2 class="p-2">Action</h2>
-        </div>
-        <div class="flex justify-between">
-          <p class="p-2 w-full">
-            No stock available. Please, add medicines using the "Add new item"
-            button
-          </p>
-        </div>
-      </div>
+      <table class="w-full bg-white border border-slate-300 rounded-sm">
+        <thead class="text-lg font-semibold border-b">
+          <tr>
+            <th class="p-2 flex-1">Medicine Name</th>
+            <th class="p-2 w-24">ID</th>
+            <th class="p-2 w-24">Stock</th>
+            <th class="p-2 w-24">Action</th>
+          </tr>
+        </thead>
+        <tbody id="productsTable">
+          <tr>
+            <td class="p-2 w-full">
+              No stock available. Please, add medicines using the "Add new item"
+              button
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="products.js"></script>

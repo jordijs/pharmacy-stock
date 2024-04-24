@@ -4,10 +4,6 @@ const toggleProductForm = () => {
   productForm.classList.toggle("hidden");
 }
 
-const hideProductForm = () => {
-  productForm.classList.add("hidden");
-}
-
 const submitProductButton = document.getElementById("submitProductButton");
 // const portfolioContainer = document.querySelector("#portfolioContainer");
 // const projectsString = localStorage.getItem("projects");
@@ -88,8 +84,9 @@ const submitProductButton = document.getElementById("submitProductButton");
 
 // }
 
-// submitButton.addEventListener("click", submitForm);
+// document.addEventListener("click", submitForm);
 
 // submitProductButton.addEventListener("click", function(e) {
 //   e.preventDefault();
+//   createProduct();
 // });

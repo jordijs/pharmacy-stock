@@ -1,87 +1,24 @@
 {
   "products": [
     {
-      "id": "fbe3",
+      "id": "44f0",
       "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
+      "expiration": "2024-04-28",
+      "batch": "gfgfd333",
+      "location": "C1"
     },
     {
-      "id": "fd31",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
+      "id": "a58e",
+      "cn": "626572",
+      "expiration": "2024-04-26",
+      "batch": "412GGG",
+      "location": "D1"
     },
     {
-      "id": "e703",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "aa08",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "1c34",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "4465",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "e270",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "5bea",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "e80a",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "2adf",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "8dcd",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
-      "location": "A1"
-    },
-    {
-      "id": "3268",
-      "cn": "954917",
-      "expiration": "2024-12-30",
-      "batch": "FGD563",
+      "id": "5592",
+      "cn": "626572",
+      "expiration": "2024-04-13",
+      "batch": "ddwasd",
       "location": "A1"
     }
   ]
