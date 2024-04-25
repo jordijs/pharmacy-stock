@@ -10,8 +10,10 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
-    <div class="container bg-[#EDF1F5] h-screen w-screen p-5">
+  <body class="bg-[#EDF1F5] mx-auto">
+    <div
+      class="container p-5 flex flex-col items-center mx-auto"
+    >
       <div class="w-full flex flex-row justify-between mb-4">
         <h1 class="text-2xl font-bold text-left">Pharmacy Stock</h1>
         <button
@@ -22,6 +24,36 @@
           ><span class="font-thin text-xs">Add new item</span>
         </button>
       </div>
+
+      <button
+        onclick="toggleExpiredProducts()"
+        id="expiredButton"
+        class="bg-white p-4 rounded-sm mb-10"
+      >
+        <p>Expired products</p>
+        <p class="text-2xl" id="expiredCounter"></p>
+      </button>
+      <div id="expiredProducts" class="hidden bg-red-200 p-10 w-full mb-10">
+        <h2 class="text-2xl font-bold">Expired products</h2>
+        <table
+          class="bg-white border border-slate-300 rounded-sm mt-10 w-full"
+        >
+          <thead class="text-lg font-semibold border-b">
+            <tr class="flex">
+              <th class="p-2 flex-1">Internal ID</th>
+              <th class="p-2 flex-1">Expiration</th>
+              <th class="p-2 flex-1">Batch</th>
+              <th class="p-2 flex-1">Location</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <tr>
+              <td class="p-2 w-full"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <div id="productForm" class="mb-10 bg-slate-700 p-10 hidden">
         <form
           action="javascript: createProduct()"
@@ -244,7 +276,10 @@
     </div>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="products.js"></script>
-    <div id="deleteConfirmation" class="absolute top-0 left-0 right-0 bottom-0 bg-slate-600/50 hidden">
+    <div
+      id="deleteConfirmation"
+      class="absolute top-0 left-0 right-0 bottom-0 bg-slate-600/50 hidden"
+    >
       <div
         class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-slate-600/50"
       >
@@ -258,7 +293,8 @@
             >
               Cancel
             </button>
-            <button id="deleteButton"
+            <button
+              id="deleteButton"
               onclick="deleteProduct(id)"
               class="bg-red-400 text-white rounded-sm p-2"
             >

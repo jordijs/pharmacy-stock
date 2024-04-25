@@ -17,7 +17,7 @@
     {
       "id": "944d",
       "cn": "626804",
-      "expiration": "2024-04-13",
+      "expiration": "2024-04-30",
       "batch": "A235C",
       "location": "C3"
     },
@@ -40,6 +40,13 @@
       "cn": "694688",
       "expiration": "2024-10-19",
       "batch": "G6442",
+      "location": "A1"
+    },
+    {
+      "id": "5f3d",
+      "cn": "694688",
+      "expiration": "2024-04-24",
+      "batch": "gvsdf444",
       "location": "A1"
     }
   ]
