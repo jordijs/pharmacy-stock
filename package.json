@@ -1,6 +1,10 @@
 {
+  "name": "pharmacy-stock",
+  "version": "1.0.0",
+  "author": "Jordi Julià Serra",
   "scripts": {
-    "start": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "json": "npx json-server data.json"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
