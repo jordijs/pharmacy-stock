@@ -6,6 +6,41 @@
       "expiration": "2024-04-27",
       "batch": "ijh",
       "location": "A1"
+    },
+    {
+      "id": "ec70",
+      "cn": "626804",
+      "expiration": "2024-04-28",
+      "batch": "FA439E",
+      "location": "C3"
+    },
+    {
+      "id": "944d",
+      "cn": "626804",
+      "expiration": "2024-04-13",
+      "batch": "A235C",
+      "location": "C3"
+    },
+    {
+      "id": "225b",
+      "cn": "694688",
+      "expiration": "2024-09-20",
+      "batch": "J667A",
+      "location": "D5"
+    },
+    {
+      "id": "6adf",
+      "cn": "694688",
+      "expiration": "2024-11-15",
+      "batch": "HH6S",
+      "location": "A1"
+    },
+    {
+      "id": "c568",
+      "cn": "694688",
+      "expiration": "2024-10-19",
+      "batch": "G6442",
+      "location": "A1"
     }
   ]
 }

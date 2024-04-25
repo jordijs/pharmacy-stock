@@ -12,4 +12,7 @@ This app is intended to help pharmacies track their available drug stock, giving
 # Inserting CN
 The app is connected to the Medicine Online Information Center of AEMPS (CIMA in Spanish). By hitting their public API REST, the name of the drug is returned.
 The **Código Nacional** or **CN** field references the unique identifier that AEMPS gives to each specific medicine. This way, by simply entering the CN, all data from the medicine will be returned.
-For the app to work, you need to enter a valid CN. You can find the CN of any medicine here: https://cima.aemps.es/cima/publico/home.html
+
+* For the app to work, **you need to enter a valid CN**.
+* You can find the CN of any medicine [here](https://cima.aemps.es/cima/publico/home.html).
+* You can also find the CN looking for the *C.N.* code on the box of any Spanish medicine. It is usually next to the barcode.
