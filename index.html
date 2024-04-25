@@ -155,8 +155,7 @@
       </table>
 
       <form id="editProductForm" class="bg-slate-700 p-10 mt-10 hidden">
-        <h2 class="text-white text-xl font-bold">
-        </h2>
+        <h2 class="text-white text-xl font-bold"></h2>
         <div class="flex flex-col gap-2">
           <label for="cn" class="text-white">Code (Código Nacional)</label>
           <input
@@ -226,24 +225,48 @@
           </div>
         </div>
         <div class="flex justify-between">
-            <button
-              type="button"
-              onclick="toggleEditForm()"
-              class="bg-slate-400 text-white rounded-sm p-2 mt-4"
-            >
-              Cancel
-            </button>
-        <button
-        type="submit"
-        id="editProductButton"
-        class="bg-teal-700 text-white rounded-sm p-2 mt-4"
-      >
-        OK
-      </button>
-      </div>    
+          <button
+            type="button"
+            onclick="toggleEditForm()"
+            class="bg-slate-400 text-white rounded-sm p-2 mt-4"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            id="editProductButton"
+            class="bg-teal-700 text-white rounded-sm p-2 mt-4"
+          >
+            OK
+          </button>
+        </div>
       </form>
     </div>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="products.js"></script>
+    <div id="deleteConfirmation" class="absolute top-0 left-0 right-0 bottom-0 bg-slate-600/50 hidden">
+      <div
+        class="fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-slate-600/50"
+      >
+        <div class="bg-white p-5 rounded-sm">
+          <h2 class="text-xl font-bold mb-4">Delete Confirmation</h2>
+          <p></p>
+          <div class="flex justify-around mt-4">
+            <button
+              onclick="toggleDeleteConfirmation()"
+              class="bg-slate-400 text-white rounded-sm p-2 mr-2"
+            >
+              Cancel
+            </button>
+            <button id="deleteButton"
+              onclick="deleteProduct(id)"
+              class="bg-red-400 text-white rounded-sm p-2"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

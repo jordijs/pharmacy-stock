@@ -82,7 +82,7 @@ async function displayDetailMedicine(cn) {
         <td class="p-2 flex-1">${product.expiration}</td>
         <td class="p-2 flex-1">${product.batch}</td>
         <td class="p-2 flex-1">${product.location}</td>
-        <td class="p-2 flex-1"><i onclick="toggleEditForm('${product.id}')" class="fa-solid fa-pen mr-4 text-blue-600"></i><i class="fa-solid fa-trash text-red-400"></i></td>
+        <td class="p-2 flex-1"><i onclick="toggleEditForm('${product.id}')" class="fa-solid fa-pen mr-4 text-blue-600"></i><i onclick="toggleDeleteConfirmation('${product.id}')" class="fa-solid fa-trash text-red-400"></i></td>
         </tr>`;
     }).join("");
     document.querySelector("#productsDetail tbody").innerHTML = detailHtml;
@@ -126,4 +126,20 @@ function editProduct(id){
       method: "PATCH",
       body: JSON.stringify(product),
     });
+}
+
+function toggleDeleteConfirmation(id) {
+    
+const deleteConfirmation = document.getElementById("deleteConfirmation")
+deleteConfirmation.querySelector("p").innerText = `Are you sure you want to delete product with internal id: ${id}?`
+deleteConfirmation.querySelector("#deleteButton").setAttribute("onclick", `deleteProduct('${id}')`)
+deleteConfirmation.classList.toggle("hidden");
+}
+
+function deleteProduct(id) {
+    fetch(`http://localhost:3000/products/${id}`, {
+      method: "DELETE",
+    });
+    document.getElementById("deleteConfirmation").classList.toggle("hidden");
+    getMedicines();
 }

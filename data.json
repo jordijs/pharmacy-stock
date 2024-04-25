@@ -1,25 +1,11 @@
 {
   "products": [
     {
-      "cn": "954917",
-      "expiration": "2023-05-30",
-      "batch": "gfg444",
-      "location": "J6",
-      "id": "8382"
-    },
-    {
       "id": "a6d7",
       "cn": "954917",
       "expiration": "2024-04-27",
       "batch": "ijh",
       "location": "A1"
-    },
-    {
-      "id": "b33c",
-      "cn": "703744",
-      "expiration": "2024-07-12",
-      "batch": "fgess",
-      "location": "C1"
     }
   ]
 }
