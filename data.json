@@ -3,23 +3,9 @@
     {
       "id": "a6d7",
       "cn": "954917",
-      "expiration": "2024-04-27",
-      "batch": "ijh",
-      "location": "A1"
-    },
-    {
-      "id": "ec70",
-      "cn": "626804",
-      "expiration": "2024-04-28",
-      "batch": "FA439E",
-      "location": "C3"
-    },
-    {
-      "id": "944d",
-      "cn": "626804",
-      "expiration": "2024-04-30",
-      "batch": "A235C",
-      "location": "C3"
+      "expiration": "2024-05-03",
+      "batch": "H67FF",
+      "location": "B3"
     },
     {
       "id": "225b",
@@ -45,9 +31,23 @@
     {
       "id": "5f3d",
       "cn": "694688",
-      "expiration": "2024-04-24",
-      "batch": "gvsdf444",
+      "expiration": "2024-04-28",
+      "batch": "D32S",
       "location": "A1"
+    },
+    {
+      "id": "110a",
+      "cn": "691699",
+      "expiration": "2024-04-23",
+      "batch": "L742",
+      "location": "D3"
+    },
+    {
+      "id": "709a",
+      "cn": "691699",
+      "expiration": "2024-04-27",
+      "batch": "FF532",
+      "location": "H10"
     }
   ]
 }
