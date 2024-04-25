@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pharmacy Stock</title>
     <link href="./src/output.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/68f3ec3982.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container bg-[#EDF1F5] h-screen w-screen p-5">
@@ -26,7 +30,7 @@
         >
           <h2 class="text-white text-xl font-bold">New product</h2>
           <div class="flex flex-col gap-2">
-            <label for="cn" class="text-white">ID (Código Nacional)</label>
+            <label for="cn" class="text-white">Code (Código Nacional)</label>
             <input
               type="number"
               name="cn"
@@ -125,29 +129,111 @@
         </thead>
         <tbody id="medicinesTable">
           <tr>
-            <td class="p-2 w-full">
-            </td>
+            <td class="p-2 w-full"></td>
           </tr>
         </tbody>
       </table>
 
-      <table id="productsDetail" class="w-full bg-white border border-slate-300 rounded-sm hidden mt-10">
+      <table
+        id="productsDetail"
+        class="w-full bg-white border border-slate-300 rounded-sm hidden mt-10"
+      >
         <thead class="text-lg font-semibold border-b">
-          <tr>
-            <th class="p-2">ID</th>
-            <th class="p-2">Expiration</th>
-            <th class="p-2">Batch</th>
-            <th class="p-2">Location</th>
+          <tr class="flex">
+            <th class="p-2 flex-1">Internal ID</th>
+            <th class="p-2 flex-1">Expiration</th>
+            <th class="p-2 flex-1">Batch</th>
+            <th class="p-2 flex-1">Location</th>
+            <th class="p-2 flex-1"></th>
           </tr>
         </thead>
         <tbody class="text-center">
           <tr>
-            <td class="p-2 w-full">
-            </td>
+            <td class="p-2 w-full"></td>
           </tr>
         </tbody>
       </table>
 
+      <form id="editProductForm" class="bg-slate-700 p-10 mt-10 hidden">
+        <h2 class="text-white text-xl font-bold">
+          Editing product with internal id:
+        </h2>
+        <div class="flex flex-col gap-2">
+          <label for="cn" class="text-white">Code (Código Nacional)</label>
+          <input
+            type="number"
+            name="cn"
+            id="cnEdit"
+            class="border border-slate-300 rounded-sm p-2"
+          />
+          <div class="flex flex-col gap-2">
+            <label for="location" class="text-white">Location</label>
+            <div class="flex gap-2">
+              <select
+                name="location"
+                id="locationLetterEdit"
+                class="border border-slate-300 rounded-sm p-2"
+              >
+                <option value=""></option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="G">G</option>
+                <option value="H">H</option>
+                <option value="I">I</option>
+                <option value="J">J</option>
+              </select>
+              <select
+                name="location"
+                id="locationNumberEdit"
+                class="border border-slate-300 rounded-sm p-2"
+              >
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="batch" class="text-white"> Batch </label>
+            <input
+              type="text"
+              name="batch"
+              id="batchEdit"
+              class="border border-slate-300 rounded-sm p-2"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="expiration" class="text-white"> Expiration </label>
+            <input
+              type="date"
+              name="expiration"
+              id="expirationEdit"
+              class="border border-slate-300 rounded-sm p-2"
+            />
+          </div>
+        </div>
+        <button
+        type="submit"
+        id="editProductButton"
+        class="bg-teal-700 text-white rounded-sm p-2 mt-4"
+      >
+        OK
+      </button>
+      </form>
     </div>
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="products.js"></script>

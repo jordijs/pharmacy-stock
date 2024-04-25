@@ -77,11 +77,12 @@ async function displayDetailMedicine(cn) {
     const data = await response.json();
     const filteredData = data.filter(product => product.cn === cn)
     const detailHtml = filteredData.map(product => {
-        return `<tr>
-        <td class="p-2">${product.id}</td>
-        <td class="p-2">${product.expiration}</td>
-        <td class="p-2">${product.batch}</td>
-        <td class="p-2">${product.location}</td>
+        return `<tr class="flex">
+        <td class="p-2 flex-1">${product.id}</td>
+        <td class="p-2 flex-1">${product.expiration}</td>
+        <td class="p-2 flex-1">${product.batch}</td>
+        <td class="p-2 flex-1">${product.location}</td>
+        <td class="p-2 flex-1"><i onclick="toggleEditForm('${product.id}')" class="fa-solid fa-pen mr-4 text-blue-600"></i><i class="fa-solid fa-trash text-red-400"></i></td>
         </tr>`;
     }).join("");
     document.querySelector("#productsDetail tbody").innerHTML = detailHtml;
@@ -91,4 +92,38 @@ async function displayDetailMedicine(cn) {
     document.querySelector("#medicinesTable tr" + `[cn="${cn}"]`).classList.add("bg-blue-200");
     document.getElementById("productsDetail").classList.remove("hidden");
 
+}
+
+function toggleEditForm(id){
+    const form = document.getElementById("editProductForm")
+    form.setAttribute("action", `javascript: editProduct('${id}')`);
+    form.querySelector("h2").textContent += id;
+    form.classList.toggle("hidden");
+}
+
+function editProduct(id){
+    const cn = document.getElementById("cnEdit").value;
+    const locationLetter = document.getElementById("locationLetterEdit").value;
+    const locationNumber = document.getElementById("locationNumberEdit").value;
+    const batch = document.getElementById("batchEdit").value;
+    const expiration = document.getElementById("expirationEdit").value;
+    const product = {
+    }
+    if (cn) {
+        product.cn = cn;
+    }
+    if (expiration) {
+        product.expiration = expiration;
+    }
+    if (batch) {
+        product.batch = batch;
+    }
+    if (locationLetter && locationNumber) {
+        product.location = locationLetter + locationNumber;
+    }
+
+    fetch(`http://localhost:3000/products/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify(product),
+    });
 }
