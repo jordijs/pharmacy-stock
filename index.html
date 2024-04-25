@@ -156,7 +156,6 @@
 
       <form id="editProductForm" class="bg-slate-700 p-10 mt-10 hidden">
         <h2 class="text-white text-xl font-bold">
-          Editing product with internal id:
         </h2>
         <div class="flex flex-col gap-2">
           <label for="cn" class="text-white">Code (Código Nacional)</label>
@@ -226,6 +225,14 @@
             />
           </div>
         </div>
+        <div class="flex justify-between">
+            <button
+              type="button"
+              onclick="toggleEditForm()"
+              class="bg-slate-400 text-white rounded-sm p-2 mt-4"
+            >
+              Cancel
+            </button>
         <button
         type="submit"
         id="editProductButton"
@@ -233,6 +240,7 @@
       >
         OK
       </button>
+      </div>    
       </form>
     </div>
     <script type="text/javascript" src="index.js"></script>

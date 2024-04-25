@@ -97,7 +97,7 @@ async function displayDetailMedicine(cn) {
 function toggleEditForm(id){
     const form = document.getElementById("editProductForm")
     form.setAttribute("action", `javascript: editProduct('${id}')`);
-    form.querySelector("h2").textContent += id;
+    form.querySelector("h2").textContent = `Editing product with internal id: ${id}`;
     form.classList.toggle("hidden");
 }
 
