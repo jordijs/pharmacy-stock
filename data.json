@@ -31,21 +31,21 @@
     {
       "id": "5f3d",
       "cn": "694688",
-      "expiration": "2024-04-28",
+      "expiration": "2024-04-30",
       "batch": "D32S",
       "location": "A1"
     },
     {
       "id": "110a",
       "cn": "691699",
-      "expiration": "2024-04-23",
+      "expiration": "2024-04-30",
       "batch": "L742",
       "location": "D3"
     },
     {
       "id": "709a",
       "cn": "691699",
-      "expiration": "2024-04-27",
+      "expiration": "2024-04-30",
       "batch": "FF532",
       "location": "H10"
     }

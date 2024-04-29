@@ -23,9 +23,11 @@ async function getMedicines() {
   const expiredButton = document.getElementById("expiredButton");
 
   if (countExpired >= 1) {
+    expiredButton.classList.remove("bg-white");
     expiredButton.classList.add("bg-red-500");
     document.getElementById("expiredCounter").innerText = countExpired;
   } else {
+    expiredButton.classList.remove("bg-white");
     expiredButton.classList.add("bg-green-500");
     document.getElementById("expiredCounter").innerText = "0";
   }

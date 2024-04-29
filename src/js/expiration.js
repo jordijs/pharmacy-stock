@@ -6,6 +6,9 @@ async function toggleExpiredProducts() {
   const filteredData = data.filter(
     (product) => product.expiration < formattedToday
   );
+  if (filteredData.length === 0) {
+    return;
+  }
   const expiredHtml = filteredData
     .map((product) => {
       return `<tr class="flex">

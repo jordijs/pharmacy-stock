@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "author": "Jordi Julià Serra",
   "scripts": {
-    "tail": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "json": "npx json-server data.json"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css && npx json-server data.json"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
